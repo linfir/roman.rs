@@ -6,4 +6,4 @@ authors = ["Yann Villessuzanne <yann@miomio.fr>"]
 license = "Unlicense"
 
 description = "Convert between integers and roman numerals"
-repository = "https://github.com/linfir/roman.rs"
+repository = "https://github.com/linfir/roman"
