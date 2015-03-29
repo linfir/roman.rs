@@ -13,6 +13,9 @@ static ROMAN: [(&'static str, i32); 13] = [
     ("IV", 4),
     ("I",  1) ];
 
+/// The largest number representable as a roman numeral.
+pub static MAX: i32 = 4999;
+
 /// Converts an integer into a roman numeral.
 ///
 /// Works for integer between 1 and 4999 inclusive, returns None otherwise.
