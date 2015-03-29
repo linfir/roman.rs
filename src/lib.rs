@@ -1,4 +1,4 @@
-static ROMAN: [(&'static str, u32); 13] = [
+static ROMAN: [(&'static str, i32); 13] = [
     ("M",  1000),
     ("CM", 900),
     ("D",  500),
@@ -13,8 +13,21 @@ static ROMAN: [(&'static str, u32); 13] = [
     ("IV", 4),
     ("I",  1) ];
 
-pub fn to_roman(n: u32) -> Option<String> {
-    if n == 0 || n > 10000 { return None }
+/// Converts an integer into a roman numeral.
+///
+/// Works for integer between 1 and 4999 inclusive, returns None otherwise.
+///
+/// # Example
+///
+/// ```
+/// use roman;
+///
+/// let x = roman::to(14);
+/// assert_eq!(x.unwrap(), "XIV");
+/// ```
+///
+pub fn to(n: i32) -> Option<String> {
+    if n <= 0 || n >= 5000 { return None }
     let mut out = String::new();
     let mut n = n;
     for i in ROMAN.iter() {
@@ -30,5 +43,5 @@ pub fn to_roman(n: u32) -> Option<String> {
 
 #[test]
 fn test_to_roman() {
-    assert_eq!(to_roman(1984).unwrap(), "MCMLXXXIV")
+    assert_eq!(to(1984).unwrap(), "MCMLXXXIV");
 }
