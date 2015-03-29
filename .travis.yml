@@ -4,5 +4,10 @@ env:
   global:
     - secure: N5CxSt+nnef7ynTh5iG9wO1gEW4iHMvoeBZtUqUOXSd89XfLLfb57D4OCb1FWXwo34vezcpqnbOOZqUekF92nJZAimY+1sw8XHPiywlAfPuoOuV+LETknX26zWjL5upq0clynW2U12KMAw6ftvor7FAfsofj0gpDip1WUL3yRk8=
 
+script:
+  - cargo test --verbose
+  - cargo build --verbose
+  - cargo doc --verbose
+
 after_script:
   - curl http://www.rust-ci.org/artifacts/put?t=$RUSTCI_TOKEN | sh
