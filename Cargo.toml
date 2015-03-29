@@ -1,0 +1,9 @@
+[package]
+
+name = "roman"
+version = "0.0.1"
+authors = ["Yann Villessuzanne <yann@miomio.fr>"]
+license = "Unlicense"
+
+description = "Convert between integers and roman numbers"
+repository = "https://github.com/linfir/roman"
