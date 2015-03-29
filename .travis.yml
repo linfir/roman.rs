@@ -2,7 +2,7 @@ language: rust
 
 env:
   global:
-    - secure: Zdr3yo+Nksa/GOkKFvCpaK9mgLWwP39Fnyt7/AwD8oFbOUMDHoXV4G2OkNOJSsgj7w7jAFD6mf9ywsWh7EMjs6+m/GXN1BdAYtU+0YaKgLu3yHfpix03wNgFhkXy6Ab72uPJ+7ClXjQGS5lsKs1vTjfRkUIWVfo5pYlcg61KEbA=
+    - secure: N5CxSt+nnef7ynTh5iG9wO1gEW4iHMvoeBZtUqUOXSd89XfLLfb57D4OCb1FWXwo34vezcpqnbOOZqUekF92nJZAimY+1sw8XHPiywlAfPuoOuV+LETknX26zWjL5upq0clynW2U12KMAw6ftvor7FAfsofj0gpDip1WUL3yRk8=
 
 after_script:
   - curl http://www.rust-ci.org/artifacts/put?t=$RUSTCI_TOKEN | sh

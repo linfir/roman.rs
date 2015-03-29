@@ -1,9 +1,13 @@
 [package]
 
 name = "roman"
-version = "0.0.2"
+version = "0.0.3"
 authors = ["Yann Villessuzanne <yann@miomio.fr>"]
 license = "Unlicense"
 
 description = "Convert between integers and roman numerals"
 repository = "https://github.com/linfir/roman"
+homepage = "https://github.com/linfir/roman"
+documentation = "http://www.rust-ci.org/linfir/roman/doc/roman/"
+readme = "README.md"
+keywords = ["text"]
