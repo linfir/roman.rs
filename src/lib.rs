@@ -1,3 +1,5 @@
+#![cfg_attr(test,feature(str_words))]
+
 static ROMAN: [(&'static str, i32); 13] = [
     ("M",  1000),
     ("CM", 900),
@@ -46,5 +48,10 @@ pub fn to(n: i32) -> Option<String> {
 
 #[test]
 fn test_to_roman() {
+    let roman = "I II III IV V VI VII VIII IX X XI XII XIII XIV XV XVI XVII XVIII XIX XX XXI XXII";
+    for (i, x) in roman.words().enumerate() {
+        let n = (i+1) as i32;
+        assert_eq!(to(n).unwrap(), x);
+    }
     assert_eq!(to(1984).unwrap(), "MCMLXXXIV");
 }
