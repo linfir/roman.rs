@@ -2,5 +2,3 @@
 # roman
 
 A Rust library to convert between integers and roman numerals.
-
-Not functional yet.
