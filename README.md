@@ -2,3 +2,5 @@
 # roman
 
 A Rust library to convert between integers and roman numerals.
+
+[API Documentation](http://miomio.fr/rust/roman)
