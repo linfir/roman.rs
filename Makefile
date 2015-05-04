@@ -1,3 +1,3 @@
 doc:
 	cargo doc
-	rsync -vre ssh --delete target/doc/ purple:www/rust
+	rsync -vre ssh --delete target/doc/ tentacle:www/rust

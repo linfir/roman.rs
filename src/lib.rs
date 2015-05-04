@@ -1,7 +1,5 @@
 //! Conversion between integers and roman numerals.
 
-#![cfg_attr(test,feature(str_words))]
-
 static ROMAN: [(char, i32); 7] = [
     ('I', 1), ('V', 5), ('X', 10), ('L', 50), ('C', 100), ('D', 500), ('M', 1000) ];
 static ROMAN_PAIRS: [(&'static str, i32); 13] = [
@@ -40,7 +38,7 @@ pub fn to(n: i32) -> Option<String> {
 #[test]
 fn test_to_roman() {
     let roman = "I II III IV V VI VII VIII IX X XI XII XIII XIV XV XVI XVII XVIII XIX XX XXI XXII";
-    for (i, x) in roman.words().enumerate() {
+    for (i, x) in roman.split_whitespace().enumerate() {
         let n = (i+1) as i32;
         assert_eq!(to(n).unwrap(), x);
     }
