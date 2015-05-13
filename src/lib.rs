@@ -37,10 +37,12 @@ pub fn to(n: i32) -> Option<String> {
 
 #[test]
 fn test_to_roman() {
-    let roman = "I II III IV V VI VII VIII IX X XI XII XIII XIV XV XVI XVII XVIII XIX XX XXI XXII";
-    for (i, x) in roman.split_whitespace().enumerate() {
+    let roman = ["I","II","III","IV","V","VI","VII","VIII","IX","X",
+                 "XI","XII","XIII","XIV","XV","XVI","XVII","XVIII","XIX","XX",
+                 "XXI","XXII"];
+    for (i, x) in roman.iter().enumerate() {
         let n = (i+1) as i32;
-        assert_eq!(to(n).unwrap(), x);
+        assert_eq!(to(n).unwrap(), *x);
     }
     assert_eq!(to(1984).unwrap(), "MCMLXXXIV");
 }
