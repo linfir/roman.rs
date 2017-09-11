@@ -4,4 +4,4 @@
 
 A Rust library to convert between integers and roman numerals.
 
-[API Documentation](http://miomio.fr/roman.rs/roman)
+[API Documentation](https://docs.rs/roman/)
